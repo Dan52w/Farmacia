@@ -15,10 +15,17 @@ public class Producto {
     private String unidadMedida;
     private String lote;
     private String fechaVencimiento;
+    private int stockActual;
     private int unidadXCaja;
     private int unidadxSobre;
+    private float precioCosto;
+    private float precioxUnidad;
+    private float precioxSobre;
+    private float precioxCaja;
+    private float utilidad;
 
-    public Producto(String nombre, String principioActvio, int codigoBarraUnico, String unidadMedida, String lote, String fechaVencimiento, int unidadXCaja, int unidadxSobre) {
+    public Producto(String nombre, String principioActvio, int codigoBarraUnico, String unidadMedida, String lote, 
+    String fechaVencimiento, int unidadXCaja, int unidadxSobre, float precioCosto, float precioxUnidad, float precioxSobre, float precioxCaja, float utilidad) {
         this.nombre = nombre;
         this.principioActvio = principioActvio;
         this.codigoBarraUnico = codigoBarraUnico;
@@ -27,13 +34,18 @@ public class Producto {
         this.fechaVencimiento = fechaVencimiento;
         this.unidadXCaja = unidadXCaja;
         this.unidadxSobre = unidadxSobre;
+        this.precioCosto = precioCosto;
+        this.precioxUnidad = precioxUnidad;
+        this.precioxSobre = precioxSobre;
+        this.precioxCaja = precioxCaja;
+        this.utilidad = utilidad;
     }
 
     @Override
     public String toString() {
-        return "Producto{" + "nombre=" + nombre + ", principioActvio=" + principioActvio + ", codigoBarraUnico=" + codigoBarraUnico + ", unidadMedida=" + unidadMedida + ", lote=" + lote + ", fechaVencimiento=" + fechaVencimiento + ", unidadXCaja=" + unidadXCaja + ", unidadxSobre=" + unidadxSobre + '}';
+        return "Producto{" + "nombre=" + nombre + ", principioActvio=" + principioActvio + ", codigoBarraUnico=" + codigoBarraUnico + ", unidadMedida=" + unidadMedida + ", lote=" + lote + ", fechaVencimiento=" + fechaVencimiento + ", unidadXCaja=" + unidadXCaja + ", unidadxSobre=" + unidadxSobre + ", precioCosto=" + precioCosto + ", precioxUnidad=" + precioxUnidad + ", precioxSobre=" + precioxSobre + ", precioxCaja=" + precioxCaja + ", utilidad=" + utilidad + '}';
     }
-    
+
     /**
      * @return the nombre
      */
@@ -144,5 +156,89 @@ public class Producto {
      */
     public void setUnidadxSobre(int unidadxSobre) {
         this.unidadxSobre = unidadxSobre;
+    }
+
+    /**
+     * @return the precioCosto
+     */
+    public float getPrecioCosto() {
+        return precioCosto;
+    }
+
+    /**
+     * @param precioCosto the precioCosto to set
+     */
+    public void setPrecioCosto(float precioCosto) {
+        this.precioCosto = precioCosto;
+    }
+
+    /**
+     * @return the precioxUnidad
+     */
+    public float getPrecioxUnidad() {
+        return precioxUnidad;
+    }
+
+    /**
+     * @param precioxUnidad the precioxUnidad to set
+     */
+    public void setPrecioxUnidad(float precioxUnidad) {
+        this.precioxUnidad = precioxUnidad;
+    }
+
+    /**
+     * @return the precioxSobre
+     */
+    public float getPrecioxSobre() {
+        return precioxSobre;
+    }
+
+    /**
+     * @param precioxSobre the precioxSobre to set
+     */
+    public void setPrecioxSobre(float precioxSobre) {
+        this.precioxSobre = precioxSobre;
+    }
+
+    /**
+     * @return the precioxCaja
+     */
+    public float getPrecioxCaja() {
+        return precioxCaja;
+    }
+
+    /**
+     * @param precioxCaja the precioxCaja to set
+     */
+    public void setPrecioxCaja(float precioxCaja) {
+        this.precioxCaja = precioxCaja;
+    }
+
+    /**
+     * @return the utilidad
+     */
+    public float getUtilidad() {
+        return utilidad;
+    }
+
+    /**
+     * @param utilidad the utilidad to set
+     */
+    public void setUtilidad(float utilidad) {
+        this.utilidad = utilidad;
+    }
+
+    /**
+     * @return the stockActual
+     */
+    public int getStockActual() {
+        return stockActual;
+    }
+
+    /**
+     * @param stockActual the stockActual to set
+     */
+    public void setStockActual(int stockActual) {
+        this.stockActual = stockActual;
     }
 }
