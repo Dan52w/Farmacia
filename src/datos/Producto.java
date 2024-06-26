@@ -24,21 +24,35 @@ public class Producto {
     private float precioxCaja;
     private float utilidad;
 
-    public Producto(String nombre, String principioActvio, int codigoBarraUnico, String unidadMedida, String lote, 
-    String fechaVencimiento, int unidadXCaja, int unidadxSobre, float precioCosto, float precioxUnidad, float precioxSobre, float precioxCaja, float utilidad) {
+    public Producto(String nombre, String principioActvio, int codigoBarraUnico, String unidadMedida, String lote, String fechaVencimiento, int stockActual, 
+    int unidadXCaja, int unidadxSobre, float precioCosto, float precioxUnidad, float precioxSobre, float precioxCaja, float utilidad) {
         this.nombre = nombre;
         this.principioActvio = principioActvio;
         this.codigoBarraUnico = codigoBarraUnico;
         this.unidadMedida = unidadMedida;
         this.lote = lote;
         this.fechaVencimiento = fechaVencimiento;
+        this.stockActual = stockActual; //Hay que hacer una Exception que no puede ser un valor negativo EXCEPTION NH
         this.unidadXCaja = unidadXCaja;
         this.unidadxSobre = unidadxSobre;
         this.precioCosto = precioCosto;
+        this.precioxUnidad = precioxUnidad; // NO PUEDE SER MENOR A PRECIOCOSTO EXCEPTION NH
+        this.precioxSobre = precioxSobre; // NO PUEDE SER MENOR A PRECIOCOSTO EXCEPTION NH
+        this.precioxCaja = precioxCaja; // NO PUEDE SER MENOR A PRECIOCOSTO EXCEPTION NH
+        this.utilidad = utilidad;
+    }
+
+    public Producto(String nombre, String principioActvio, int codigoBarraUnico, String unidadMedida, String lote, String fechaVencimiento, float precioxUnidad, float precioxSobre, float precioxCaja) {
+        this.nombre = nombre;
+        this.principioActvio = principioActvio;
+        this.codigoBarraUnico = codigoBarraUnico;
+        this.unidadMedida = unidadMedida;
+        this.lote = lote;
+        this.fechaVencimiento = fechaVencimiento;
         this.precioxUnidad = precioxUnidad;
         this.precioxSobre = precioxSobre;
         this.precioxCaja = precioxCaja;
-        this.utilidad = utilidad;
+        /*En vez de crear otro objeto, mejor un constructor de lo que necesitamos para ventas*/
     }
 
     @Override
